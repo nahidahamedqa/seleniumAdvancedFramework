@@ -14,6 +14,13 @@ LogInPageController logInPageController;
     init();
   logInPageController =new LogInPageController(driver);
 logInPageController.signInTab();
+
+}
+@Test
+public void verifyLogIn(){
+    logInPageController=new LogInPageController(driver);
+    init();
+    logInPageController.login();
 }
 
 @AfterTest

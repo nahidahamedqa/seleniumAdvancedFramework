@@ -19,7 +19,6 @@ public class LogInPageController {
     }
     public void signInTab() {
         signInButton.isDisplayed();
-        signInButton.click();
     }
      public void login(){
          signInButton.click();

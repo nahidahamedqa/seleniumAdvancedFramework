@@ -3,17 +3,29 @@ package loginPageTest;
 import base.ScriptBase;
 import controller.LogInPageController;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class LoginPage extends ScriptBase {
 LogInPageController logInPageController;
+@BeforeTest
+public void BeforeTest(){
+    init();
+}
 
 @Test
     public void verifySignInButtonDisplayed (){
 
-    init();
   logInPageController =new LogInPageController(driver);
 logInPageController.signInTab();
+
+}
+@Test
+public void verifyLogIn() throws InterruptedException {
+    logInPageController=new LogInPageController(driver);
+
+    logInPageController.login();
 }
 
 @AfterTest

@@ -22,7 +22,7 @@ logInPageController.signInTab();
 
 }
 @Test
-public void verifyLogIn(){
+public void verifyLogIn() throws InterruptedException {
     logInPageController=new LogInPageController(driver);
 
     logInPageController.login();

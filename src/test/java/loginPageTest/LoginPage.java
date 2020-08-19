@@ -27,7 +27,16 @@ public void verifyLogIn() throws InterruptedException {
 
     logInPageController.login();
 }
-
+@Test
+public void verifyMyOrderText(){
+    logInPageController=new LogInPageController(driver);
+    logInPageController.informationDesk(driver,"My orders");
+}
+    @Test
+    public void verifyMyPersonalInformationText(){
+        logInPageController=new LogInPageController(driver);
+        logInPageController.informationDesk(driver,"My personal info");
+    }
 @AfterTest
     public void afterTest (){
     driver.close();

@@ -26,14 +26,24 @@ public class LogInPageController {
          signInButton.click();
          Thread.sleep(1000);
          authenticationTab.isDisplayed();
-         inputEmail.sendKeys("test@gmail.com");
-         inputPasswd.sendKeys("123");
-         signInButton.click();
+         //inputEmail.sendKeys("test@gmail.com");
+         //inputPasswd.sendKeys("123");
+         //signInButton.click();
 
         }
        public void informationDesk(WebDriver driver,String information){
         driver.findElement(By.xpath("//a[contains(text(),'"+information+"')]")).isDisplayed();
 
        }
+
+    public void inPutEmailOrPass(WebDriver driver,String inputEmailOrPass,String emailOrPass) {
+driver.findElement(By.xpath("//*[@id='"+inputEmailOrPass+"']")).sendKeys(emailOrPass);
+
     }
+    public void signInButton(){
+        signInButton.click();
+    }
+
+}
+
 

@@ -26,6 +26,8 @@ public void verifyLogIn() throws InterruptedException {
     logInPageController=new LogInPageController(driver);
 
     logInPageController.login();
+    logInPageController.inPutEmailOrPass(driver,"email","Test@gmail.com");
+    logInPageController.inPutEmailOrPass(driver,"passwd","1234");
 }
 @Test
 public void verifyMyOrderText(){

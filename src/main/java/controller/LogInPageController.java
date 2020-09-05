@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 public class LogInPageController {
 
@@ -26,6 +27,8 @@ public class LogInPageController {
          signInButton.click();
          Thread.sleep(1000);
          authenticationTab.isDisplayed();
+         Assert.assertEquals(authenticationTab,authenticationTab);
+
          //inputEmail.sendKeys("test@gmail.com");
          //inputPasswd.sendKeys("123");
          //signInButton.click();
@@ -40,6 +43,11 @@ public class LogInPageController {
 driver.findElement(By.xpath("//*[@id='"+inputEmailOrPass+"']")).sendKeys(emailOrPass);
 
     }
+    public void information(WebDriver driver,String specials) {
+        driver.findElement(By.xpath("//*[@id='" + specials + "']")).sendKeys(specials);
+
+    }
+
     public void signInButton(){
         signInButton.click();
     }

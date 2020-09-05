@@ -9,11 +9,13 @@ public class HomePageController {
     @FindBy(xpath = "//*[@id='contact-link']/a")
     WebElement contactUsButton ;
 
+
     public HomePageController(WebDriver driver){
         PageFactory.initElements(driver,this);
     }
 public void contactUsTab(){
-  contactUsButton.isDisplayed();
+
+        contactUsButton.isDisplayed();
 }
 
 }
